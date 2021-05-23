@@ -1,7 +1,0 @@
-[
-{
-  "directory": "D:/Bureau/Development/Projects/- Templates/SFML_skeleton/build",
-  "command": "C:\\MinGW\\bin\\mingw32-g++.exe -DSFML_STATIC @CMakeFiles/App.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\App.dir\\sources\\main.cpp.obj -c \"D:\\Bureau\\Development\\Projects\\- Templates\\SFML_skeleton\\sources\\main.cpp\"",
-  "file": "D:/Bureau/Development/Projects/- Templates/SFML_skeleton/sources/main.cpp"
-}
-]
