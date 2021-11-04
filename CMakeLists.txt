@@ -7,6 +7,10 @@ project(App)
 file(GLOB_RECURSE SOURCES sources/*.cpp)
 file(GLOB_RECURSE HEADERS includes/*.hpp includes/*.h)
 
+if(MSVC)
+	set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup")
+endif()
+
 # Executable
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
@@ -24,6 +28,7 @@ if(MSVC)
 	target_compile_options(${PROJECT_NAME} PUBLIC "/Zc:__cplusplus")
 	set_target_properties(${PROJECT_NAME} PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}")
 	set_property(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR} PROPERTY VS_STARTUP_PROJECT ${PROJECT_NAME})
+	set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 17)
 endif()
 
 # SFML
