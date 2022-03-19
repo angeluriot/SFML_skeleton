@@ -9,6 +9,10 @@
 
 This repository is a **skeleton C++ project** that include the [**Simple and Fast Multimedia Library** *(SFML)*](https://www.sfml-dev.org/).
 
+<br/>
+
+⚠️ This repository contains **submodules**, add `--recurse-submodules` when cloning ⚠️
+
 <br>
 
 <p align="center">
