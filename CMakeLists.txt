@@ -35,7 +35,7 @@ endif()
 # SFML
 if(MSVC)
 
-	if(X64_BITS)
+	if(CMAKE_SIZEOF_VOID_P EQUAL 8)
 		set(SFML_PATH libraries/SFML/VS/x64)
 	else()
 		set(SFML_PATH libraries/SFML/VS/x86)
@@ -43,7 +43,7 @@ if(MSVC)
 
 elseif(MINGW)
 
-	if(X64_BITS)
+	if(CMAKE_SIZEOF_VOID_P EQUAL 8)
 		set(SFML_PATH libraries/SFML/MinGW/x64)
 	else()
 		set(SFML_PATH libraries/SFML/MinGW/x86)
